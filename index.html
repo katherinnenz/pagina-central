@@ -34,7 +34,7 @@ header nav a{opacity:.7;transition:.3s}header nav a:hover{opacity:1}
 .bk{background:none;border:0;color:rgba(255,255,255,.6);font:inherit;font-size:13px;text-decoration:underline;cursor:pointer;justify-self:start;padding:4px 0}
 .ps{display:flex;gap:14px;padding:12px 0;border-top:1px solid rgba(255,255,255,.14);font-size:14px;text-align:left}.ps b{color:var(--o2);flex:none}
 .nx{margin:16px 0;padding:14px;border:1px solid rgba(255,170,110,.3);border-radius:14px;background:rgba(255,90,31,.08);font-size:14px;text-align:left}.nx small{display:block;color:var(--o2);font-size:11px;font-weight:600;letter-spacing:.05em;text-transform:uppercase;margin-bottom:4px}
-.qb{max-height:92vh;overflow:auto}.qb .pill{text-align:center}
+.pill:disabled{opacity:.6;cursor:wait;transform:none}.qb{max-height:92vh;overflow:auto}.qb .pill{text-align:center}
 .pill.tg{display:inline-flex;flex-direction:column;align-items:flex-start;text-align:left;line-height:1.2;padding:10px 24px}.pill.tg small{font-size:11px;font-weight:500;letter-spacing:.04em;opacity:.8;margin-top:3px}
 .ghost{position:absolute;left:50%;bottom:-6%;transform:translateX(-50%);font-size:clamp(120px,27vw,430px);font-weight:600;letter-spacing:-.06em;color:rgba(255,138,61,.16);white-space:nowrap;line-height:.8;z-index:0}
 .stage{position:relative;height:56vh;min-height:400px;margin-top:-4vh}
@@ -117,11 +117,11 @@ footer{padding:36px 0;font-size:14px;opacity:.7;position:relative;z-index:2}foot
 <section id="metodo"><div class="w"><span class="k rv">Método</span><h2 class="t rv">Endiosar <span class="dim">con propósito.</span></h2><p class="rv" style="max-width:560px;font-size:20px;margin:-30px 0 40px;opacity:.85">Creo en endiosar a las mujeres con propósito: que se vean, se crean y se atrevan. Así lo trabajo, en cinco pasos.</p><div class="tb" id="tb"></div><div class="out" id="out"></div></div></section>
 
 <section class="ct" id="contacto"><div class="w"><span class="k rv">Disponible para proyectos selectos</span><h2 class="rv">¿Y si hacemos <span class="dim">algo grande?</span></h2>
-<form id="f" class="rv"><input id="n" placeholder="Tu nombre" required maxlength="80"><input id="e" type="email" placeholder="Tu correo" required maxlength="160"><select id="s" required><option value="" disabled selected>¿En qué te ayudo?</option><option>Dirección creativa y branding</option><option>Gestión de talento / reality</option><option>Estrategia de contenido</option><option>Web y Shopify</option><option>Marca personal</option><option>Otro</option></select><textarea id="m" rows="3" placeholder="Cuéntame tu idea" required maxlength="2000"></textarea><button class="pill" type="submit" style="justify-self:start;padding:15px 30px">Preparar mi correo ↗</button></form>
+<form id="f" class="rv"><input id="n" placeholder="Tu nombre" required maxlength="80"><input id="e" type="email" placeholder="Tu correo" required maxlength="160"><select id="s" required><option value="" disabled selected>¿En qué te ayudo?</option><option>Dirección creativa y branding</option><option>Gestión de talento / reality</option><option>Estrategia de contenido</option><option>Web y Shopify</option><option>Marca personal</option><option>Otro</option></select><textarea id="m" rows="3" placeholder="Cuéntame tu idea" required maxlength="2000"></textarea><p class="er" id="fe" role="alert"></p><button class="pill" type="submit" style="justify-self:start;padding:15px 30px">Enviar mensaje ↗</button></form>
 <p style="margin-top:26px">o directo por <a href="https://wa.link/kjvj95" target="_blank" rel="noopener" style="text-decoration:underline">WhatsApp ↗</a></p></div></section>
 </main>
 <footer><div class="w"><span>© <span id="y"></span> Katherinne Núñez</span><a href="https://www.instagram.com/katherinnenz/" target="_blank" rel="noopener">Instagram ↗</a><span>Hecho con intención — Santiago, RD</span></div></footer>
-<div class="qz" id="qz" hidden><div class="qb"><button class="x" id="qx" aria-label="Cerrar">✕</button><span class="k" id="qk"></span><h3 id="qt"></h3><div id="qo"></div><p class="qn">Al enviar se abre tu correo con tus respuestas. No guardo datos en esta página.</p></div></div>
+<div class="qz" id="qz" hidden><div class="qb"><button class="x" id="qx" aria-label="Cerrar">✕</button><span class="k" id="qk"></span><h3 id="qt"></h3><div id="qo"></div><p class="qn">Tu solicitud me llega directo. Uso tus datos solo para responderte.</p></div></div>
 <script>
 const $=s=>document.querySelector(s),$$=s=>[...document.querySelectorAll(s)];
 const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}}),{threshold:.12});$$('.rv').forEach(x=>io.observe(x));
@@ -146,9 +146,13 @@ const P={
 let qa=[],qi=0,qp='';
 function qr(){const c=P[qp],n=c.q.length+1;$('#qk').textContent=qp+' · '+(qi+1)+' / '+n;const t=$('#qt'),o=$('#qo');
 if(qi<c.q.length){t.textContent=c.q[qi][0];o.innerHTML=c.q[qi][1].map(x=>`<button class="op">${x}</button>`).join('');[...o.children].forEach(b=>b.onclick=()=>{qa[qi]=b.textContent;qi++;qr()})}
-else{t.textContent='¿A dónde te escribo?';o.innerHTML='<input id="qn1" placeholder="Tu nombre" maxlength="80"><input id="qe1" type="email" placeholder="Tu correo" maxlength="160">'+(c.ex?`<input id="qx1" placeholder="${c.ex}" maxlength="120">`:'')+'<button class="pill" id="qs1" style="justify-self:start;padding:15px 30px">Enviar mi solicitud ↗</button>'+(c.cal?'<a class="pill g" href="https://calendar.app.google/b1HvDK1ih643CgzNA" target="_blank" rel="noopener" style="justify-self:start;padding:15px 30px">Agendar llamada gratis de 30 min ↗</a>':'');
-$('#qs1').onclick=()=>{const n=$('#qn1').value.trim(),e=$('#qe1').value.trim(),x=c.ex?$('#qx1').value.trim():'';if(!n||!/\S+@\S+\.\S+/.test(e)){$('#qn1').focus();return}
-location.href='mailto:hola@katherinnenunez.com?subject='+encodeURIComponent(qp+' · '+n)+'&body='+encodeURIComponent('Hola Katherinne,\n\nMe llamo '+n+'.\nCorreo: '+e+(x?'\n'+c.ex+': '+x:'')+'\nBusco: '+qp+'\n\n'+c.q.map((q,i)=>q[0]+' '+qa[i]).join('\n'))}}}
+else{t.textContent='¿A dónde te escribo?';o.innerHTML='<input id="qn1" placeholder="Tu nombre" maxlength="80"><input id="qe1" type="email" placeholder="Tu correo" maxlength="160">'+(c.ex?`<input id="qx1" placeholder="${c.ex}" maxlength="120">`:'')+'<p class="er" id="qer" role="alert"></p><button class="pill" id="qs1" style="justify-self:start;padding:15px 30px">Enviar mi solicitud ↗</button>'+(c.cal?'<a class="pill g" href="https://calendar.app.google/b1HvDK1ih643CgzNA" target="_blank" rel="noopener" style="justify-self:start;padding:15px 30px">Agendar llamada gratis de 30 min ↗</a>':'');
+$('#qs1').onclick=async()=>{const n=$('#qn1').value.trim(),e=$('#qe1').value.trim(),x=c.ex?$('#qx1').value.trim():'',er=$('#qer'),b=$('#qs1');er.textContent='';
+if(!n||!/\S+@\S+\.\S+/.test(e)){er.textContent='Escribe tu nombre y un correo válido.';return}
+b.disabled=true;b.textContent='Enviando…';
+const campos={nombre:n,email:e,busca:qp};if(x)campos[c.ex]=x;c.q.forEach((q,i)=>campos[q[0]]=qa[i]);
+if(await enviar(campos,'Solicitud: '+qp+' · '+n)){$('#qt').textContent='¡Listo, gracias!';$('#qo').innerHTML='<p id="ok" style="font-size:16px;opacity:.85"></p><a class="pill g" style="text-align:center;padding:15px 30px" target="_blank" rel="noopener" href="https://wa.link/kjvj95">Escríbeme por WhatsApp →</a>';$('#ok').textContent='Recibí tu solicitud, '+n.split(' ')[0]+'. Te escribo pronto al correo que dejaste.'}
+else{er.textContent='No se pudo enviar. Revisa tu conexión e inténtalo de nuevo.';b.disabled=false;b.textContent='Enviar mi solicitud ↗'}}}}
 /* ===== Diagnóstico para Asesoría 1:1 ===== */
 const ACCESS_KEY="a7f931ad9bae4b66b8a254ad8a107539",FORM_URL="https://splitforms.com/api/submit",
 SUPABASE_URL="https://kdxfiqapaptdmjmjpfrh.supabase.co",SUPABASE_KEY="sb_publishable_mI0Qqqjp-40B2_OCKqQyTA_6e_1DmGE",
@@ -163,6 +167,7 @@ const DIAG={
 "Mi marca no comunica su valor":{t:"Tu punto de partida es el mensaje",x:"Tu trabajo puede ser bueno, pero si en 5 segundos no se entiende qué haces y para quién, la gente pasa de largo.",p:["Reescribe tu bio con el resultado que das, no con tu título.","Mira tus últimos 9 posts: ¿se entiende qué vendes?","Pon un caso o testimonio real a la vista."]},
 "Publico, pero no atraigo clientes":{t:"Tu punto de partida es la conversión",x:"Ya tienes movimiento. Lo que falta es un camino claro entre que alguien te ve y que te escribe.",p:["Dale a cada publicación un solo llamado a la acción.","Usa tus historias para abrir conversaciones, no solo para mostrar.","Deja en tu bio un único enlace con una única acción."]},
 "No tengo una estrategia clara":{t:"Tu punto de partida es la dirección",x:"Sin un objetivo claro, cada decisión pesa el doble. Con una meta simple, todo lo demás se ordena.",p:["Define un solo objetivo para los próximos 30 días.","Elige 3 temas de contenido que lleven a tu oferta.","Arma un calendario semanal sencillo que puedas cumplir."]}};
+async function enviar(campos,subject){try{const r=await fetch(FORM_URL,{method:'POST',headers:{'Content-Type':'application/json',Accept:'application/json'},body:JSON.stringify(Object.assign({access_key:ACCESS_KEY,from_name:"Formulario Katherinne Núñez",subject,botcheck:""},campos))});const j=await r.json();return j.success!==false}catch(e){return false}}
 let di=0,da={};
 const dph=()=>$('#dw').value.trim();
 function sbH(){const h={apikey:SUPABASE_KEY,'Content-Type':'application/json',Prefer:'return=minimal'};if(SUPABASE_KEY.startsWith('eyJ'))h.Authorization='Bearer '+SUPABASE_KEY;return h}
@@ -203,8 +208,10 @@ function dfin(){
   dsave({subject:(urg?"[URGENTE] ":"")+"Solicitud completa: Asesoría 1:1",diagnostico:d.t},true);
 }
 $$('[data-q]').forEach(b=>b.onclick=()=>{qp=b.dataset.q;qi=0;qa=[];$('#qz').hidden=false;
-  if(P[qp].diag){di=0;dr()}else{$('.qn').textContent='Al enviar se abre tu correo con tus respuestas. No guardo datos en esta página.';qr()}});
+  if(P[qp].diag){di=0;dr()}else{$('.qn').textContent='Tu solicitud me llega directo. Uso tus datos solo para responderte.';qr()}});
 const qc=()=>$('#qz').hidden=true;$('#qx').onclick=qc;$('#qz').onclick=e=>{if(e.target.id=='qz')qc()};addEventListener('keydown',e=>{if(e.key=='Escape')qc()});
 $('#y').textContent=new Date().getFullYear();
-$('#f').onsubmit=e=>{e.preventDefault();const v=i=>document.getElementById(i).value.trim();location.href='mailto:hola@katherinnenunez.com?subject='+encodeURIComponent('Nueva consulta · '+v('s')+' · '+v('n'))+'&body='+encodeURIComponent('Hola Katherinne,\n\nMe llamo '+v('n')+'.\nCorreo: '+v('e')+'\nMe interesa: '+v('s')+'\n\n'+v('m'))};
+$('#f').onsubmit=async e=>{e.preventDefault();const v=i=>document.getElementById(i).value.trim(),b=e.target.querySelector('button'),er=$('#fe');er.textContent='';b.disabled=true;b.textContent='Enviando…';
+if(await enviar({nombre:v('n'),email:v('e'),interes:v('s'),mensaje:v('m')},'Nueva consulta · '+v('s')+' · '+v('n'))){$('#f').innerHTML='<p style="font-size:24px;line-height:1.3">¡Gracias! Recibí tu mensaje y te escribo pronto.</p>'}
+else{er.textContent='No se pudo enviar. Revisa tu conexión o escríbeme por WhatsApp.';b.disabled=false;b.textContent='Enviar mensaje ↗'}};
 </script></body></html>
