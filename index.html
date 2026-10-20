@@ -28,6 +28,13 @@ header nav a{opacity:.7;transition:.3s}header nav a:hover{opacity:1}
 .gl h4{font-size:24px;font-weight:400;letter-spacing:-.03em;margin-bottom:8px}.gl p{font-size:14px;opacity:.75;line-height:1.45}
 .hero{position:relative;min-height:100svh;padding:130px 0 60px;overflow:hidden;background:radial-gradient(120% 70% at 50% 112%,#ff5a1f 0%,#b3340c 28%,#240d06 60%,var(--bg) 100%)}
 .hero h1{font-size:clamp(40px,7.6vw,122px);max-width:13ch;position:relative;z-index:3}.sub{max-width:520px;font-size:20px;margin:28px 0;opacity:.85;position:relative;z-index:3}.acts{display:flex;gap:12px;flex-wrap:wrap;position:relative;z-index:3}.pill.g{background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.25);backdrop-filter:blur(10px)}.dot{display:inline-block;width:9px;height:9px;border-radius:50%;background:#4ade80;margin-right:10px;animation:pu 2s infinite}@keyframes pu{0%{box-shadow:0 0 0 0 rgba(74,222,128,.6)}70%,100%{box-shadow:0 0 0 12px rgba(74,222,128,0)}}.paths{position:relative;z-index:3}.pr{display:flex;gap:10px;flex-wrap:wrap}.pill.g{font-family:inherit;color:#fff;cursor:pointer}.qz{position:fixed;inset:0;z-index:80;display:grid;place-items:center;background:rgba(7,3,2,.78);backdrop-filter:blur(14px);padding:20px}.qz[hidden]{display:none}.qb{width:min(560px,100%);position:relative;border-radius:28px;padding:34px 30px;background:linear-gradient(145deg,rgba(70,28,12,.95),rgba(28,11,5,.97));border:1px solid rgba(255,170,110,.3);animation:pop .4s cubic-bezier(.2,.8,.2,1)}@keyframes pop{from{opacity:0;transform:scale(.94) translateY(20px)}}.qb h3{font-size:clamp(28px,4vw,40px);margin-bottom:22px;line-height:1.05}.qb .x{position:absolute;right:20px;top:16px;background:none;border:0;color:#fff;font-size:20px;cursor:pointer}#qo{display:grid;gap:10px}.op{text-align:left;padding:14px 18px;border-radius:16px;border:1px solid rgba(255,255,255,.18);background:rgba(255,255,255,.06);color:#fff;font:inherit;font-size:16px;cursor:pointer;transition:.25s}.op:hover{background:var(--o);border-color:var(--o);transform:translateX(6px)}.qn{font-size:12px;opacity:.55;margin-top:16px}.rot{color:var(--o2);display:inline-block;transition:.45s}.rot.out{opacity:0;transform:translateY(-.3em);filter:blur(8px)}.big1{font-size:40px;font-weight:300;letter-spacing:-.05em;line-height:1;margin-bottom:8px}.c2{width:min(320px,80vw)!important}
+.pg{height:3px;background:rgba(255,255,255,.15);border-radius:2px;margin:0 0 22px}.pg span{display:block;height:100%;width:0;background:var(--o);border-radius:2px;transition:width .3s}
+.cons{display:flex;gap:10px;align-items:flex-start;font-size:12px;opacity:.75;cursor:pointer}.cons input{width:16px;height:16px;padding:0;margin-top:2px;flex:none;accent-color:var(--o)}
+.er{color:#ffb4a2;font-size:13px;min-height:1.3em}
+.bk{background:none;border:0;color:rgba(255,255,255,.6);font:inherit;font-size:13px;text-decoration:underline;cursor:pointer;justify-self:start;padding:4px 0}
+.ps{display:flex;gap:14px;padding:12px 0;border-top:1px solid rgba(255,255,255,.14);font-size:14px;text-align:left}.ps b{color:var(--o2);flex:none}
+.nx{margin:16px 0;padding:14px;border:1px solid rgba(255,170,110,.3);border-radius:14px;background:rgba(255,90,31,.08);font-size:14px;text-align:left}.nx small{display:block;color:var(--o2);font-size:11px;font-weight:600;letter-spacing:.05em;text-transform:uppercase;margin-bottom:4px}
+.qb{max-height:92vh;overflow:auto}.qb .pill{text-align:center}
 .ghost{position:absolute;left:50%;bottom:-6%;transform:translateX(-50%);font-size:clamp(120px,27vw,430px);font-weight:600;letter-spacing:-.06em;color:rgba(255,138,61,.16);white-space:nowrap;line-height:.8;z-index:0}
 .stage{position:relative;height:56vh;min-height:400px;margin-top:-4vh}
 .orb{position:absolute;left:50%;top:50%;width:min(36vw,380px);aspect-ratio:1;border-radius:50%;transform:translate(-50%,-50%);background:radial-gradient(circle at 34% 28%,#4a2a1c,#0e0604 52%,#000);box-shadow:0 0 140px 24px rgba(255,90,31,.5),inset -26px -34px 70px rgba(255,120,50,.4);animation:fl 7s ease-in-out infinite;z-index:1}
@@ -132,7 +139,7 @@ D.forEach((d,i)=>{const b=document.createElement('button');b.textContent=d[0];b.
 const W=['marca','historia','talento','negocio','voz'];let wi=0;setInterval(()=>{const r=$('#rot');r.classList.add('out');setTimeout(()=>{wi=(wi+1)%W.length;r.textContent=W[wi];r.classList.remove('out')},450)},2400);
 const W2=["Ya","Este mes","En 2 o 3 meses","Solo estoy explorando"];
 const P={
-"Asesoría 1:1":{q:[["¿Cuál es tu mayor dificultad?",["No sé cómo posicionarme","Mi contenido no conecta","No logro vender","Necesito dirección y claridad"]],["¿En qué etapa estás?",["Estoy empezando","Ya tengo audiencia o negocio","Quiero escalar","Quiero reinventarme"]],["¿Cuándo quieres empezar?",W2]],ex:null,cal:1},
+"Asesoría 1:1":{diag:1},
 "Tu cuenta en el reality":{q:[["¿Qué necesitas que haga con tu cuenta?",["Manejarla completa mientras estoy adentro","Crear y publicar contenido en tiempo real","Cuidar mi narrativa y mi imagen","Hacerla crecer y mantener el engagement"]],["¿En qué momento estás?",["Voy a entrar a un reality","Ya estoy dentro","Ya salí y quiero aprovechar el momento","Todavía estoy en proceso de entrar"]],["¿Cuándo necesitas que empiece?",["Esta semana","Este mes","En 2 o 3 meses","Aún no tengo fecha"]]],ex:"Tu @ de Instagram"},
 "Branding y dirección creativa":{q:[["¿Qué necesitas?",["Identidad visual y logo","Dirección creativa de campaña o contenido","Estrategia y posicionamiento de marca","Web o tienda online"]],["¿En qué etapa está tu marca?",["Va a nacer","Existe pero no se ve profesional","Quiero renovarla","Quiero escalarla"]],["¿Cuándo quieres empezar?",W2]],ex:"Tu @ o sitio web (opcional)"}};
 let qa=[],qi=0,qp='';
@@ -141,7 +148,61 @@ if(qi<c.q.length){t.textContent=c.q[qi][0];o.innerHTML=c.q[qi][1].map(x=>`<butto
 else{t.textContent='¿A dónde te escribo?';o.innerHTML='<input id="qn1" placeholder="Tu nombre" maxlength="80"><input id="qe1" type="email" placeholder="Tu correo" maxlength="160">'+(c.ex?`<input id="qx1" placeholder="${c.ex}" maxlength="120">`:'')+'<button class="pill" id="qs1" style="justify-self:start;padding:15px 30px">Enviar mi solicitud ↗</button>'+(c.cal?'<a class="pill g" href="https://calendar.app.google/b1HvDK1ih643CgzNA" target="_blank" rel="noopener" style="justify-self:start;padding:15px 30px">Agendar llamada gratis de 30 min ↗</a>':'');
 $('#qs1').onclick=()=>{const n=$('#qn1').value.trim(),e=$('#qe1').value.trim(),x=c.ex?$('#qx1').value.trim():'';if(!n||!/\S+@\S+\.\S+/.test(e)){$('#qn1').focus();return}
 location.href='mailto:hola@katherinnenunez.com?subject='+encodeURIComponent(qp+' · '+n)+'&body='+encodeURIComponent('Hola Katherinne,\n\nMe llamo '+n+'.\nCorreo: '+e+(x?'\n'+c.ex+': '+x:'')+'\nBusco: '+qp+'\n\n'+c.q.map((q,i)=>q[0]+' '+qa[i]).join('\n'))}}}
-$$('[data-q]').forEach(b=>b.onclick=()=>{qp=b.dataset.q;qi=0;qa=[];$('#qz').hidden=false;qr()});
+/* ===== Diagnóstico para Asesoría 1:1 ===== */
+const ACCESS_KEY="a7f931ad9bae4b66b8a254ad8a107539",FORM_URL="https://splitforms.com/api/submit",
+SUPABASE_URL="https://kdxfiqapaptdmjmjpfrh.supabase.co",SUPABASE_KEY="sb_publishable_mI0Qqqjp-40B2_OCKqQyTA_6e_1DmGE",
+PRECALL_URL="preparacion.html",WA_LINK="https://wa.link/kjvj95",
+LEAD_ID=(window.crypto&&crypto.randomUUID)?crypto.randomUUID():String(Date.now())+Math.random().toString(16).slice(2);
+const PROD={playbook:{n:"DIOSA — El Playbook",u:"https://beacons.ai/katherinnenz"},pack:{n:"Pack: Tu marca empieza aquí",u:"https://shop.beacons.ai/katherinnenz/20405ac9-2c9f-4f6b-860f-07e82370d4a5"}};
+const DQ=[["dificultad","¿Cuál es tu mayor dificultad?",["No sé qué vender","Mi marca no comunica su valor","Publico, pero no atraigo clientes","No tengo una estrategia clara"]],
+["etapa","¿En qué etapa está tu negocio?",["Estoy comenzando","Ya vendo productos o servicios","Tengo un negocio establecido y quiero crecer"]],
+["inicio","¿Cuándo quieres comenzar?",["Esta semana","En los próximos 30 días","Estoy explorando opciones"]]];
+const DIAG={
+"No sé qué vender":{t:"Tu punto de partida es la oferta",x:"Antes de publicar más, hay que tener claro qué problema resuelves y por qué alguien te pagaría. Sin eso, todo el contenido se siente suelto.",p:["Escribe en una frase a quién ayudas y qué logra contigo.","Anota 3 cosas por las que la gente ya te ha pedido ayuda.","Elige una sola y ponle precio."]},
+"Mi marca no comunica su valor":{t:"Tu punto de partida es el mensaje",x:"Tu trabajo puede ser bueno, pero si en 5 segundos no se entiende qué haces y para quién, la gente pasa de largo.",p:["Reescribe tu bio con el resultado que das, no con tu título.","Mira tus últimos 9 posts: ¿se entiende qué vendes?","Pon un caso o testimonio real a la vista."]},
+"Publico, pero no atraigo clientes":{t:"Tu punto de partida es la conversión",x:"Ya tienes movimiento. Lo que falta es un camino claro entre que alguien te ve y que te escribe.",p:["Dale a cada publicación un solo llamado a la acción.","Usa tus historias para abrir conversaciones, no solo para mostrar.","Deja en tu bio un único enlace con una única acción."]},
+"No tengo una estrategia clara":{t:"Tu punto de partida es la dirección",x:"Sin un objetivo claro, cada decisión pesa el doble. Con una meta simple, todo lo demás se ordena.",p:["Define un solo objetivo para los próximos 30 días.","Elige 3 temas de contenido que lleven a tu oferta.","Arma un calendario semanal sencillo que puedas cumplir."]}};
+let di=0,da={};
+const dph=()=>$('#dw').value.trim();
+function sbH(){const h={apikey:SUPABASE_KEY,'Content-Type':'application/json',Prefer:'return=minimal'};if(SUPABASE_KEY.startsWith('eyJ'))h.Authorization='Bearer '+SUPABASE_KEY;return h}
+async function dsave(extra,mail){
+  const b=Object.assign({nombre:da.n,email:da.e,whatsapp:da.w,necesidad:"Una asesoría estratégica 1:1"},da.a,extra);
+  try{await fetch(SUPABASE_URL+'/rest/v1/leads',{method:'POST',headers:sbH(),body:JSON.stringify({lead_id:LEAD_ID,etapa_flujo:b.diagnostico?'completo':'inicio',nombre:b.nombre,email:b.email,whatsapp:b.whatsapp,necesidad:b.necesidad,dificultad:b.dificultad||null,etapa:b.etapa||null,inicio:b.inicio||null,diagnostico:b.diagnostico||null})})}catch(e){}
+  if(mail){try{await fetch(FORM_URL,{method:'POST',headers:{'Content-Type':'application/json',Accept:'application/json'},body:JSON.stringify(Object.assign({access_key:ACCESS_KEY,from_name:"Formulario Katherinne Núñez",consentimiento:"Sí",botcheck:""},b))})}catch(e){}}
+}
+function dr(){
+  const k=$('#qk'),t=$('#qt'),o=$('#qo');$('.qn').textContent='Gratis · Uso tus datos solo para responderte';
+  if(di===0){
+    k.textContent='Asesoría 1:1 · Diagnóstico gratuito';t.textContent='Empieza tu diagnóstico';
+    o.innerHTML='<input id="dn" placeholder="Tu nombre" maxlength="80" autocomplete="name"><input id="de" type="email" placeholder="Tu correo" maxlength="160" autocomplete="email"><input id="dw" type="tel" inputmode="tel" placeholder="WhatsApp con código de país (+1 809 000 0000)" maxlength="30" autocomplete="tel"><label class="cons"><input type="checkbox" id="dc"><span>Acepto recibir mi resultado y que Katherinne Núñez me contacte por correo o WhatsApp sobre mi solicitud.</span></label><p class="er" id="der" role="alert"></p><button class="pill" id="dg" style="justify-self:start;padding:15px 30px">Empezar mi diagnóstico →</button>';
+    $('#dg').onclick=()=>{const n=$('#dn').value.trim(),e=$('#de').value.trim(),w=dph(),er=$('#der');
+      if(!n){er.textContent='Escribe tu nombre.';return}
+      if(!/^\S+@\S+\.\S+$/.test(e)){er.textContent='Revisa tu correo, parece incompleto.';return}
+      if(w.replace(/\D/g,'').length<7){er.textContent='Escribe tu número de WhatsApp.';return}
+      if(!$('#dc').checked){er.textContent='Marca la casilla para poder enviarte el resultado.';return}
+      da={n,e,w,a:{}};dsave({},false);di=1;dr()};
+  }else if(di<=3){
+    const [key,q,ops]=DQ[di-1];k.textContent='Asesoría 1:1 · '+di+' / 3';t.textContent=q;
+    o.innerHTML='<div class="pg"><span style="width:'+((di-1)/3*100)+'%"></span></div>'+ops.map(x=>`<button class="op">${x}</button>`).join('')+'<button class="bk" id="db">← Atrás</button>';
+    [...o.querySelectorAll('.op')].forEach(b=>b.onclick=()=>{da.a[key]=b.textContent;di++;di===4?dfin():dr()});
+    $('#db').onclick=()=>{di--;dr()};
+  }
+}
+function dfin(){
+  const a=da.a,d=DIAG[a.dificultad],urg=a.inicio==="Esta semana";
+  const p=a.dificultad==="No sé qué vender"?PROD.playbook:PROD.pack;
+  const u=new URL(PRECALL_URL,location.href);u.searchParams.set('name',da.n);u.searchParams.set('email',da.e);u.searchParams.set('wa',da.w);u.searchParams.set('ref','asesoria');
+  $('#qk').textContent=urg?'Quieres empezar esta semana':(a.inicio==="En los próximos 30 días"?'Quieres empezar en 30 días':'Estás explorando');
+  $('#qt').textContent=d.t;
+  const o=$('#qo');o.innerHTML='<p style="font-size:15px;opacity:.8;text-align:left">'+d.x+'</p><div>'+d.p.map((s,i)=>`<div class="ps"><b>0${i+1}</b><span>${s}</span></div>`).join('')+'</div>'
+   +'<div class="nx"><small>Mi recomendación</small>Lo mejor es que hablemos 30 minutos, sin costo, para ver tu caso y decidir juntas si una asesoría 1:1 es lo que necesitas.</div>'
+   +'<a class="pill" style="text-align:center;padding:15px 30px" target="_blank" rel="noopener" href="'+u.toString()+'">Agendar mi llamada gratis de 30 min →</a>'
+   +'<a class="pill g" style="text-align:center;padding:15px 30px" target="_blank" rel="noopener" href="'+WA_LINK+'">Recibir mi resultado por WhatsApp →</a>'
+   +'<p style="font-size:13px;opacity:.7;text-align:left">Mientras tanto: <a href="'+p.u+'" target="_blank" rel="noopener" style="text-decoration:underline;color:var(--o2)">'+p.n+' ↗</a></p>';
+  dsave({subject:(urg?"[URGENTE] ":"")+"Solicitud completa: Asesoría 1:1",diagnostico:d.t},true);
+}
+$$('[data-q]').forEach(b=>b.onclick=()=>{qp=b.dataset.q;qi=0;qa=[];$('#qz').hidden=false;
+  if(P[qp].diag){di=0;dr()}else{$('.qn').textContent='Al enviar se abre tu correo con tus respuestas. No guardo datos en esta página.';qr()}});
 const qc=()=>$('#qz').hidden=true;$('#qx').onclick=qc;$('#qz').onclick=e=>{if(e.target.id=='qz')qc()};addEventListener('keydown',e=>{if(e.key=='Escape')qc()});
 $('#y').textContent=new Date().getFullYear();
 $('#f').onsubmit=e=>{e.preventDefault();const v=i=>document.getElementById(i).value.trim();location.href='mailto:hola@katherinnenunez.com?subject='+encodeURIComponent('Nueva consulta · '+v('s')+' · '+v('n'))+'&body='+encodeURIComponent('Hola Katherinne,\n\nMe llamo '+v('n')+'.\nCorreo: '+v('e')+'\nMe interesa: '+v('s')+'\n\n'+v('m'))};
